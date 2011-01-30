@@ -105,8 +105,11 @@ var MooParallax = new Class({
 			// Mouse Response
 			if (self.options.mouseResponse){
 			
+				// what el to we listen on?
+				movel = self.options.mouseActiveOutside ? document.id(document.body) : el;
+			
 				// add mouse move
-				el.addEvent('mousemove', function(event){
+				movel.addEvent('mousemove', function(event){
 							
 					// Is mouse inside?
 					mouseport.xinside = (event.page.x >= mouseport.left && event.page.x < mouseport.width+mouseport.left) ? true : false;
