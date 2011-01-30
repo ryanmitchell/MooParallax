@@ -137,7 +137,7 @@ var MooParallax = new Class({
 					} else {
 					
 						mouseport.xinside = true;
-						mouseport.yinside - true;
+						mouseport.yinside = true;
 					
 					}
 					
