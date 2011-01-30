@@ -126,10 +126,20 @@ var MooParallax = new Class({
 			
 				// add mouse move
 				movel.addEvent('mousemove', function(event){
+				
+					// if mouse active outside then always call it
+					if (self.options.mouseActiveOutside){
 							
-					// Is mouse inside?
-					mouseport.xinside = (event.page.x >= mouseport.left && event.page.x < mouseport.width+mouseport.left) ? true : false;
-					mouseport.yinside = (event.page.y >= mouseport.top  && event.page.y < mouseport.height+mouseport.top)  ? true : false;
+						// Is mouse inside?
+						mouseport.xinside = (event.page.x >= mouseport.left && event.page.x < mouseport.width+mouseport.left) ? true : false;
+						mouseport.yinside = (event.page.y >= mouseport.top  && event.page.y < mouseport.height+mouseport.top)  ? true : false;
+					
+					} else {
+					
+						mouseport.xinside = true;
+						mouseport.yinside - true;
+					
+					}
 					
 					// Then switch active on.
 					if (mouseport.xinside && mouseport.yinside && !mouseport.active){
