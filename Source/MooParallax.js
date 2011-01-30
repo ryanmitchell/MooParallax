@@ -1,3 +1,19 @@
+/*
+---
+description: A MooTools class to simulate parallax effect
+
+license: MIT-style
+
+authors:
+- Ryan Mitchell
+
+requires:
+- core/1.3.0: '*'
+
+provides: [MooParallax]
+
+...
+*/
 var MooParallax = new Class({
 
 	Implements: [Options],
