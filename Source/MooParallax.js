@@ -175,6 +175,7 @@ var MooParallax = new Class({
 		  		for (var i=0; i<layer.length; i++){
 		    		setupLayer(layer, i, mouseport);
 				}
+				timer.fire(localmouse.x, localmouse.y); 
 				
 			}.bind(this));
 		
