@@ -128,7 +128,7 @@ var MooParallax = new Class({
 				movel.addEvent('mousemove', function(event){
 				
 					// if mouse active outside then always call it
-					if (self.options.mouseActiveOutside){
+					if (!self.options.mouseActiveOutside){
 							
 						// Is mouse inside?
 						mouseport.xinside = (event.page.x >= mouseport.left && event.page.x < mouseport.width+mouseport.left) ? true : false;
