@@ -171,11 +171,11 @@ var MooParallax = new Class({
 			// Window Resize Response
 			window.addEvent('resize', function(){
 
-		  		setupPorts(viewport, mouseport);
+		  		self.setupPorts(viewport, mouseport);
 		  		for (var i=0; i<layer.length; i++){
-		    		setupLayer(layer, i, mouseport);
+		    		self.setupLayer(layer, i, mouseport);
 				}
-				timer.fire(localmouse.x, localmouse.y); 
+				self.moveLayers(layer, localmouse.x, localmouse.y);
 				
 			}.bind(this));
 		
